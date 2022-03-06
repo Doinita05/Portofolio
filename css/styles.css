@@ -232,6 +232,16 @@ header{
     font-style: normal;
     }
 
+.tcontainer{
+  width:85%;
+  margin:auto;
+  display:flex;
+  flex-flow:row;
+  flex-direction:row;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
 .articole{
       display:flex;
       flex-flow: column;
