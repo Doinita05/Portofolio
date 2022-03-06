@@ -1,0 +1,38 @@
+// 1. Create the button
+var button = document.createElement("button");
+button.innerHTML = "Do Something";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", function() {
+alert("did something");
+});
+
+function handleCommand(event) {
+    // Handles both mouse clicks and keyboard
+    // activate with Enter or Space
+
+    // Keypresses other then Enter and Space should not trigger a command
+    if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
+        return;
+    }
+
+    // Get the new name value from the input element
+    let newNameInput = document.getElementById('newName');
+    let name = newNameInput.value;
+    newNameInput.value = ''; // clear the text field
+    newNameInput.focus();  // give the text field focus to enable entering and additional name.
+
+    // Don't add blank entries to the list.
+    if(name.length > 0) {
+        listItem = document.createElement('li');
+        listItem.appendChild(document.createTextNode(name));
+
+        // Add the new name to the list.
+        let list = document.getElementById('nameList');
+        list.appendChild(listItem);
+    }
+}
