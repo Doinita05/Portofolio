@@ -681,12 +681,12 @@ label{
 }
 
 /*here starts the work section*/
-section{
-  display:block;
+/*section{
+  display:flex;
   width:65%;
   border: 1px dotted indianred;
     }
-
+*/
 .grid{
   display:block;
   grid-template-columns: 1fr 1fr 1fr;
